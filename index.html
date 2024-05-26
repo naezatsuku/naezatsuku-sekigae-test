@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>席替スイッチ</title>
+  </head>
+  <body></body>
+
+<div id="desks">
+    <div class="yline1">
+        <div class="desk" id="a1">0</div>
+        <div class="desk" id="a2">0</div>
+        <div class="desk" id="a3">0</div>
+        <div class="desk" id="a4">0</div>
+        <div class="desk" id="a5">0</div>
+        <div class="desk" id="a6">0</div>
+        <div class="desk" id="a7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="b1">0</div>
+        <div class="desk" id="b2">0</div>
+        <div class="desk" id="b3">0</div>
+        <div class="desk" id="b4">0</div>
+        <div class="desk" id="b5">0</div>
+        <div class="desk" id="b6">0</div>
+        <div class="desk" id="b7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="c1">0</div>
+        <div class="desk" id="c2">0</div>
+        <div class="desk" id="c3">0</div>
+        <div class="desk" id="c4">0</div>
+        <div class="desk" id="c5">0</div>
+        <div class="desk" id="c6">0</div>
+        <div class="desk" id="c7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="d1">0</div>
+        <div class="desk" id="d2">0</div>
+        <div class="desk" id="d3">0</div>
+        <div class="desk" id="d4">0</div>
+        <div class="desk" id="d5">0</div>
+        <div class="desk" id="d6">0</div>
+        <div class="desk" id="d7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="e1">0</div>
+        <div class="desk" id="e2">0</div>
+        <div class="desk" id="e3">0</div>
+        <div class="desk" id="e4">0</div>
+        <div class="desk" id="e5">0</div>
+        <div class="desk" id="e6">0</div>
+        <div class="desk" id="e7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="f1">空席</div>
+        <div class="desk" id="f2">0</div>
+        <div class="desk" id="f3">0</div>
+        <div class="desk" id="f4">0</div>
+        <div class="desk" id="f5">0</div>
+        <div class="desk" id="f6">空席</div>
+        <div class="desk" id="f7">空席</div>
+    </div>
+    </div>
+</div>
+<p　class="aa">1年4組用の席替え</p>
+<div class="but-box"><button class="but" onclick="func1()">席替スイッチ</button></div>
+
+<audio id="audio1">
+    <source src="https%3A//api.soundcloud.com/tracks/1829818413%3Fsecret_token%3Ds-mO1D4ca4NF1" type="audio/mp3">
+</audio>
+<audio id="audio2">
+    <source src="https://drive.google.com/file/d/186dbXBknKNCBpmo5MKGy_KqycuSgjp92/view?usp=drive_link" type="audio/mp3">
+</audio>
+<audio id="audio3">
+    <source src="https://drive.google.com/file/d/14w9YFh4UbK6-QcdCv5vqXOigQb08KGPY/view?usp=drive_link" type="audio/mp3">
+</audio>
+<img src="C:\Users\manato\Downloads\IMG_0107.PNG" alt="noimage" id="img-place" style="display:none;">
+
+
+<div class="show" id="show" >
+<span>出席番号<p id="num" class="ss">0</p></span>
+
+<span　><p id="desk" class="ss" style="display: none;">0</p></span>
+
+<span>カウント<p id="count" class="ss">0</p></span>
+
+<button id="btn2" class="btn2" >button</button>
+
+</div>
+
+<div id="sho_num" >
+<span class="apap" id="apap">No.00</p></span>
+<button id="btn_go" onclick="dle_display()">let'go</button>
+</div>
+<div  class="effects" id="effects">
+    <img src="C:\Users\manato\Downloads\kyota1 (1).JPG" id="imgA">
+    <img src="C:\Users\manato\Downloads\toowa.JPG" alt="2" id="imgB">
+    <img src="C:\Users\manato\Downloads\yosida1.JPG" alt="3" id="imgC">
+    <img src="C:\Users\manato\Downloads\hide2 (1).JPG" alt="1" id="img1">
+    <img src="C:\Users\manato\Downloads\hide1 (1).JPG" alt="2" id="img2">
+    <img src="C:\Users\manato\Downloads\yoshida2 (1).JPG" alt="3" id="img3">
+    <img src="https://pbs.twimg.com/media/GOZRUaHbIAA6GzJ?format=jpg&name=small" id="kyota">
+
+    <button id="btn_go2" onclick="next()">let'go</button>
+    <button id="btn_go3" onclick="next()">next</button>
+    
+</div>
+<p id="memory" style="display: none;">a1</p>
+<style>
+    #kyota{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img1{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img2{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img3{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img4{
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img5{
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img6{
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #imgA{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #imgB{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #imgC{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+.effects{
+    display:none;
+  position:absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:1000px;
+ height:1200px;
+ background-color: aquamarine;
+}
+    #btn_go{
+        display: none;
+        position: absolute;
+        width:auto;
+        height:auto;
+        font-size:250px;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #btn_go2{
+        display: none;
+        position: absolute;
+        width:auto;
+        height:auto;
+        font-size:250px;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #btn_go3{
+        display: none;
+        position: absolute;
+        width:auto;
+        height:auto;
+        font-size:250px;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #sho_num{
+        display: none;
+position: absolute;
+width: 1500px;
+height: 900px;
+top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+background-color: aliceblue;
+    }
+.apap{
+    display: flex;
+    font-size: 300px;
+   
+    justify-content: center;
+}
+    div.desk{
+        display:flex;
+        width:160px;
+        height: 85px;
+        margin:5px;
+        border:solid 4px black;
+       align-items:center;
+       justify-content: center;
+       font-size:40px;
+       background-color: #338DC9;
+       color:#eee; 
+    }
+    div.yline1{
+        width:1000px;
+        margin:5px;
+        display:flex;
+    }
+    
+    #desks{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }      
+.aa{
+    font-size:40px;
+    color:black;
+}
+.but-box{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+.but{
+    font-size:60px;
+    font-weight: bold;
+    color:yellow;
+    background-color: red;
+    width:auto;
+    height:auto;
+}
+#img-place{
+    width: 1000px;
+    position: absolute;
+    top:80%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    
+    
+}
+.show{
+    
+    width:500px;
+    height:auto;
+    background-color: #eee;
+    position: absolute;
+    top:140%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.ss{
+    
+    
+    font-size:30px;
+    font-weight: bold;
+}
+</style>
+<script>
+   function next(){
+
+    document.getElementById("audio3").currentTime=0;
+        document.getElementById("audio3").play();
+    document.getElementById("btn_go3").style.display="none";
+    document.getElementById("effects").style.display="none";
+   }
+   function sho_next_effect(){
+    
+    
+    document.getElementById("btn_go2").style.display="none";
+    let target=document.getElementById("memory").textContent;
+    target=target.split("");
+    //a,b,c,d,e,fの時の記述
+  
+    setTimeout(()=>{document.getElementById("btn_go3").style.display="block"},3000);
+    document.getElementById("audio3").currentTime=0;
+        document.getElementById("audio3").play();
+   }
+    function sho_effect(){
+        document.getElementById("kyota").style.display="block";
+    
+        document.getElementById("effects").style.display="block";
+
+   setTimeout(()=>{document.getElementById("btn_go3").style.display="block"},3000)
+
+    }
+    function sho_display(){
+        document.getElementById("sho_num").style.display="block";
+        setTimeout(()=>{document.getElementById("btn_go").style.display="block"},2000)
+    }
+    function dle_display(){
+        
+        document.getElementById("audio2").currentTime=0;
+        document.getElementById("audio2").play();
+    document.getElementById("sho_num").style.display="none"
+    document.getElementById("btn_go").style.display="none";
+    document.getElementById("kyota").style.display="none";
+    sho_effect();
+    }
+    let count=0;
+    let memo1=[];
+    let memo2=[];
+    
+    let desks=["a1","a2","a3","a4","a5","a6","a7","b1","b2","b3","b4","b5","b6","b7","c1","c2","c3","c4","c5","c6","c7","d1","d2","d3","d4","d5","d6","d7","e1","e2","e3","e4","e5","e6","e7","f2","f3","f4","f5"];
+    let numbers=[];
+    for(let i=1;i<=39;i++){
+        numbers.push(i);
+    }
+
+
+
+
+    function func1(){
+        let kkk=document.getElementById("memory").textContent;
+document.getElementById(kkk).style.backgroundColor="#338DC9";
+        document.getElementById("audio1").currentTime=0;
+        document.getElementById("audio1").play();
+        sho_display();
+
+
+        let a=0;
+        count++;
+        while(a<1){
+            if(count>39){
+                break;
+            }
+            let number=Math.floor(Math.random()*39)+1;
+            let tar=Math.floor(Math.random()*39);
+            if(memo1.includes(number)==false&&memo2.includes(tar)==false){
+memo1.push(number);
+memo2.push(tar);
+let desk=desks[tar];
+memo1.sort((a, b) => a - b);
+memo2.sort((a, b) => a - b);
+
+a=1;
+        
+
+console.log(desk);
+document.getElementById("memory").textContent=desk;
+document.getElementById("num").textContent=number;
+document.getElementById("desk").textContent=desk;
+document.getElementById("count").textContent=count;
+document.getElementById(desk).textContent=number;
+document.getElementById("apap").textContent=number;
+document.getElementById(desk).style.backgroundColor="red";
+
+
+    }
+}
+
+console.log(memo1,memo2);
+
+}
+     
+
+</script>
+</html>

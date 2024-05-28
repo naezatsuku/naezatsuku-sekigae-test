@@ -96,12 +96,12 @@
 <button id="btn_go" onclick="dle_display()">let'go</button>
 </div>
 <div  class="effects" id="effects">
-    <img src="C:\Users\manato\Downloads\kyota1 (1).JPG" id="imgA">
-    <img src="C:\Users\manato\Downloads\toowa.JPG" alt="2" id="imgB">
-    <img src="C:\Users\manato\Downloads\yosida1.JPG" alt="3" id="imgC">
-    <img src="C:\Users\manato\Downloads\hide2 (1).JPG" alt="1" id="img1">
-    <img src="C:\Users\manato\Downloads\hide1 (1).JPG" alt="2" id="img2">
-    <img src="C:\Users\manato\Downloads\yoshida2 (1).JPG" alt="3" id="img3">
+    <img src="https://pbs.twimg.com/media/GOq2Eb8X0AEib7B?format=jpg&name=small" id="imgA">
+    <img src="https://pbs.twimg.com/media/GOq2Fl9WsAAiy-z?format=jpg&name=small" alt="2" id="imgB">
+    <img src="https://pbs.twimg.com/media/GOq2Gt8XQAAe62E?format=jpg&name=360x360" alt="3" id="imgC">
+    <img src="https://pbs.twimg.com/media/GOq2IEVXUAEbbsp?format=jpg&name=360x360" alt="1" id="img1">
+    <img src="https://pbs.twimg.com/media/GOq3B6aX0AAL4Qg?format=jpg&name=small" alt="2" id="img2">
+    <img src="https://github.com/naezatsuku/naezatsuku-sekigae-test/blob/master/toowa.JPG?raw=true" alt="3" id="img3">
     <img src="https://pbs.twimg.com/media/GOZRUaHbIAA6GzJ?format=jpg&name=small" id="kyota">
 
     <button id="btn_go2" onclick="next()">let'go</button>
@@ -566,6 +566,8 @@ background-color: aliceblue;
     }
 </style>
 <script>
+    let arr=["kyota","img1","img2","img3","imgA","imgB","imgC"];
+    let qqq;
    function next(){
 
     document.getElementById("audio3").currentTime=0;
@@ -586,8 +588,10 @@ background-color: aliceblue;
         document.getElementById("audio3").play();
    }
     function sho_effect(){
-        document.getElementById("kyota").style.display="block";
-    
+        let ppp=Math.floor(Math.random()*7);
+        qqq=arr[ppp];
+        document.getElementById(qqq).style.display="block";
+        console.log(ppp)
         document.getElementById("effects").style.display="block";
 
    setTimeout(()=>{document.getElementById("btn_go3").style.display="block"},3000)
@@ -604,6 +608,12 @@ background-color: aliceblue;
     document.getElementById("sho_num").style.display="none"
     document.getElementById("btn_go").style.display="none";
     document.getElementById("kyota").style.display="none";
+    document.getElementById("img1").style.display="none";
+    document.getElementById("img2").style.display="none";
+    document.getElementById("img3").style.display="none";
+    document.getElementById("imgA").style.display="none";
+    document.getElementById("imgB").style.display="none";
+    document.getElementById("imgC").style.display="none";
     sho_effect();
     }
     let count=0;
